@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #ffb6c1; /* Change background color to baby pink */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+        }
+
+        #anniversary-card {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            opacity: 0; /* Set initial opacity to 0 for animation */
+            transform: translateY(20px); /* Set initial position for animation */
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #anniversary-card img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        #anniversary-message {
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Heart animation */
+        .heart {
+            color: #e25555;
+            font-size: 24px;
+            position: absolute;
+            transform-origin: center bottom;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Kiss animation */
+        .kiss {
+            color: #ff69b4;
+            font-size: 24px;
+            position: absolute;
+            animation: blowKiss 1.5s infinite;
+        }
+
+        @keyframes blowKiss {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="anniversary-card">
+    <img src="https://images.unsplash.com/photo-1622801222397-180244c5124d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/600x300" alt="Anniversary Image">
+    <div id="anniversary-message">
+        <h2>Happy Anniversary, Bubs!</h2>
+        <p>Thank you for the wonderful moments we've shared. Here's to many more years of love and happiness together.</p>
+        <!-- Add more sweet words or messages as needed -->
+
+        <!-- Heart animation -->
+        <span class="heart">&#10084;</span>
+        <span class="heart">&#10084;</span>
+
+        <!-- Kiss animation -->
+        <span class="kiss">&#128536;</span>
+        <span class="kiss">&#128536;</span>
+    </div>
+</div>
+
+</body>
+</html>
